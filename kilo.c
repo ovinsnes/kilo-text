@@ -177,10 +177,10 @@ void editorMoveCursor(char key) {
         case 'l':
             E.cx++;
             break;
-        case 'j':
+        case 'k':
             E.cy--;
             break;
-        case 'l':
+        case 'j':
             E.cy++;
             break; 
     }
@@ -211,7 +211,7 @@ void editorProcessKeypress(void) {
 /*** init ***/
 
 void initEditor(void) {
-    E.cx = 10;
+    E.cx = 0;
     E.cy = 0;
 
     if (getWindowSize(&E.screenrows, &E.screencols) == -1) die("getWindowSize");
